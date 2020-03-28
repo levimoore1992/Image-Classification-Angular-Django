@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ImageFrontend';
+  files: any;
+
+  onSelect($event: NgxDropzoneChangeEvent) {
+    
+  }
+
+  onRemove(f: any) {
+    
+  }
 }
