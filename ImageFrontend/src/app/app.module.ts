@@ -9,11 +9,14 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {HttpClientModule} from '@angular/common/http';
 import {MatButtonModule} from "@angular/material/button";
 import { ImageListComponent } from './image-list/image-list.component';
+import { HomeComponent } from './home/home.component';
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
     AppComponent,
-    ImageListComponent
+    ImageListComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,8 @@ import { ImageListComponent } from './image-list/image-list.component';
     NgxDropzoneModule,
     MatProgressSpinnerModule,
     HttpClientModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

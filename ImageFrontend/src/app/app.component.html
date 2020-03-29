@@ -1,14 +1,1 @@
-<div class="main">
-<ngx-dropzone (change)="onSelect($event)" class="back" (dragover)="dragActive()">
-    <ngx-dropzone-label>Drop it, baby!</ngx-dropzone-label>
-    <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
-        <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
-    </ngx-dropzone-preview>
-</ngx-dropzone>
-<mat-spinner *ngIf="isLoading" [diameter]="50"></mat-spinner>
-<p *ngIf="isDragActive">Drop those picture</p>
-<p *ngIf="!isDragActive">You can drop those picture here</p>
-
-<button *ngIf="files.length > 0" mat-raised-button color="primary" (click)="sendImage()">Send Image</button>
-<p *ngIf="classifiedName">This is a {{classifiedName}}</p>
-</div>
+<router-outlet></router-outlet>
