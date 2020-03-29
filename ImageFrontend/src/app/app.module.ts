@@ -11,12 +11,15 @@ import {MatButtonModule} from "@angular/material/button";
 import { ImageListComponent } from './image-list/image-list.component';
 import { HomeComponent } from './home/home.component';
 import {MatCardModule} from "@angular/material/card";
+import { NavbarComponent } from './navbar/navbar.component';
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 @NgModule({
   declarations: [
     AppComponent,
     ImageListComponent,
-    HomeComponent
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import {MatCardModule} from "@angular/material/card";
     MatProgressSpinnerModule,
     HttpClientModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
