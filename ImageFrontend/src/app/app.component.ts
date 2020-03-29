@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
   files: File[] = [];
   isDragActive = false;
   isLoading = false;
+  classifiedName: string;
 
   constructor(private service: ImageService) {}
 
@@ -40,10 +41,13 @@ onRemove(event) {
 
 
   sendImage() {
+    this.isLoading = true;
     const instance = new FormData();
     instance.append('picture', this.files[0], this.files[0].name);
     this.service.postImages(instance).subscribe(res => {
-      console.log(res);
+      // @ts-ignore
+      this.classifiedName = res.classified;
+      this.isLoading = false;
     });
   }
 }
