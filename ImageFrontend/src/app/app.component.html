@@ -1,3 +1,4 @@
+<div class="main">
 <ngx-dropzone (change)="onSelect($event)" class="back" (dragover)="dragActive()">
     <ngx-dropzone-label>Drop it, baby!</ngx-dropzone-label>
     <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
@@ -8,5 +9,6 @@
 <p *ngIf="isDragActive">Drop those picture</p>
 <p *ngIf="!isDragActive">You can drop those picture here</p>
 
-<button *ngIf="files.length > 0" mat-button color="primary" (click)="sendImage()">Send Image</button>
+<button *ngIf="files.length > 0" mat-raised-button color="primary" (click)="sendImage()">Send Image</button>
 <p *ngIf="classifiedName">This is a {{classifiedName}}</p>
+</div>
