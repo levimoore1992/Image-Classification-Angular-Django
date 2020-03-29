@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgxDropzoneModule} from 'ngx-dropzone';
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import {NgxDropzoneModule} from 'ngx-dropzone';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgxDropzoneModule
+    NgxDropzoneModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

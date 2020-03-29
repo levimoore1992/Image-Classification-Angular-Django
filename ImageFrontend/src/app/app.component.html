@@ -4,6 +4,7 @@
         <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
     </ngx-dropzone-preview>
 </ngx-dropzone>
+<mat-spinner *ngIf="isLoading" [diameter]="50"></mat-spinner>
 <p *ngIf="isDragActive">Drop those picture</p>
 <p *ngIf="!isDragActive">You can drop those picture here</p>
 

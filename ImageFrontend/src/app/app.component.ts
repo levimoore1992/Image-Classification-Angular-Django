@@ -10,10 +10,15 @@ export class AppComponent {
   title = 'ImageFrontend';
   files: File[] = [];
   isDragActive = false;
+  isLoading = false;
 
   onSelect(event) {
   console.log(event);
+  this.isLoading = true;
   this.files.push(...event.addedFiles);
+  setTimeout(() => {
+      this.isLoading = false;
+  }, 1000);
 }
 
 onRemove(event) {
