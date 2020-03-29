@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {NgxDropzoneChangeEvent} from 'ngx-dropzone';
 
 @Component({
   selector: 'app-root',
@@ -7,13 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ImageFrontend';
-  files: any;
+  files: File[] = [];
 
-  onSelect($event: NgxDropzoneChangeEvent) {
-    
-  }
+  onSelect(event) {
+  console.log(event);
+  this.files.push(...event.addedFiles);
+}
 
-  onRemove(f: any) {
-    
-  }
+onRemove(event) {
+  console.log(event);
+  this.files.splice(this.files.indexOf(event), 1);
+}
 }
