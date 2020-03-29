@@ -1,16 +1,24 @@
-import { Component } from '@angular/core';
-import {NgxDropzoneChangeEvent} from 'ngx-dropzone';
+import {Component, OnInit} from '@angular/core';
+import {ImageService} from './image.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'ImageFrontend';
   files: File[] = [];
   isDragActive = false;
   isLoading = false;
+
+  constructor(private service: ImageService) {}
+
+  ngOnInit(): void {
+    this.service.getImages().subscribe(res => {
+      console.log(res);
+    });
+  }
 
   onSelect(event) {
   console.log(event);
@@ -29,4 +37,6 @@ onRemove(event) {
   dragActive() {
     this.isDragActive = true;
   }
+
+
 }
