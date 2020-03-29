@@ -9,6 +9,7 @@ import {NgxDropzoneChangeEvent} from 'ngx-dropzone';
 export class AppComponent {
   title = 'ImageFrontend';
   files: File[] = [];
+  isDragActive = false;
 
   onSelect(event) {
   console.log(event);
@@ -19,4 +20,8 @@ onRemove(event) {
   console.log(event);
   this.files.splice(this.files.indexOf(event), 1);
 }
+
+  dragActive() {
+    this.isDragActive = true;
+  }
 }
