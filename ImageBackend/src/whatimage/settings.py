@@ -77,7 +77,6 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'whatimage.wsgi.application'
 
 
 # Database
