@@ -8,4 +8,4 @@
 <p *ngIf="isDragActive">Drop those picture</p>
 <p *ngIf="!isDragActive">You can drop those picture here</p>
 
-<button *ngIf="files.length > 0" mat-button color="primary">Send Image</button>
+<button *ngIf="files.length > 0" mat-button color="primary" (click)="sendImage()">Send Image</button>

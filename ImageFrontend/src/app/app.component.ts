@@ -39,4 +39,11 @@ onRemove(event) {
   }
 
 
+  sendImage() {
+    const instance = new FormData();
+    instance.append('picture', this.files[0], this.files[0].name);
+    this.service.postImages(instance).subscribe(res => {
+      console.log(res);
+    });
+  }
 }

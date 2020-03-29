@@ -13,4 +13,7 @@ export class ImageService {
   }
 
 
+  postImages(instance: FormData) {
+    return this.http.post('http://127.0.0.1:8000/api/images/', instance);
+  }
 }
