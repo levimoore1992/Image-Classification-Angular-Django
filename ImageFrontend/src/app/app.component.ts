@@ -16,9 +16,7 @@ export class AppComponent implements OnInit {
   constructor(private service: ImageService) {}
 
   ngOnInit(): void {
-    this.service.getImages().subscribe(res => {
-      console.log(res);
-    });
+
   }
 
   onSelect(event) {
